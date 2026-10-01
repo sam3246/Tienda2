@@ -303,7 +303,9 @@ input[type="text"]:focus {
         <div class="card">
             <h3>{{ producto.nombre }}</h3>
             <p><strong>Categoría:</strong> {{ producto.categoria }}</p>
-            <p><strong>Precio:</strong> ${{ producto.precio }} | <strong>Cantidad:</strong> {{ producto.cantidad }}</p>
+            <p><strong>Precio:</strong> ${{ producto.precio }}</p>
+            <p><strong>Cantidad:</strong> {{ producto.cantidad }}</p>
+            <p><strong>Estado:</strong> {{ producto.estado }}</p>
 
             <div class="actions">
                 <a href="/productos/detalle/{{ producto.id }}/">Ver</a>

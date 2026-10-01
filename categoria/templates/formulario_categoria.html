@@ -307,7 +307,10 @@ input[type="text"]:focus {
             <label for="observaciones">Observaciones</label>
             <input type="text" id="observaciones" name="observaciones" value="{{ categoria.observaciones|default:'' }}" required autocomplete="off">
         </div>
-
+        <div class="form-group">
+            <label for="estado">Estado</label>
+            <input type="text" id="estado" name="estado" value="{{ categoria.estado|default:'' }}" required autocomplete="off">
+        </div>
         <button type="submit" class="btn-submit">Guardar</button>
         <a href="/categoria/lista/" class="back-link">Cancelar y volver</a>
     </form>

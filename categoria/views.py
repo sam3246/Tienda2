@@ -6,7 +6,8 @@ def crear(request):
     if request.method == 'POST':
         cat = categoria(
             nombre = request.POST["nombre"],
-            observaciones = request.POST["observaciones"]
+            observaciones = request.POST["observaciones"],
+            estado = request.POST["estado"]
         )
         cat.save()
         return redirect('/categoria/lista/')
@@ -33,6 +34,7 @@ def editar(request, id):
     if request.method == "POST":
         cat.nombre = request.POST["nombre"]
         cat.observaciones = request.POST["observaciones"]
+        cat.estado = request.POST["estado"]
         cat.save()
         return redirect('/categoria/lista/')
     return render(
